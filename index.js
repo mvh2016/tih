@@ -61,7 +61,7 @@ client.on('message', async message => {
                         collector2.on('collect', msg => {
                             counter2++;
                             if(counter2 == 1) {
-                                if (msg.toString().toLowerCase() === 'done' && msg.author.id == message.author.id) {
+                                if (msg.toString().toLowerCase().includes('done') && msg.author.id == message.author.id) {
                                     roblox.getStatus(id).then(status => {
                                         console.log('Status found: '+status)
                                         if (status.includes(correctBlurb)) {
