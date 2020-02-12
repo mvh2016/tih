@@ -132,9 +132,9 @@ client.on('message', async message => {
                         var outcome = response.body.role
                         console.log(outcome)
                         message.member.addRole(outcome)
-                        if (id > 30) {
+                        if (rank > 30) {
                             message.member.addRole('606776868305240067')
-                            if (id > 248) {
+                            if (rank > 248) {
                                 message.member.addRole('603635548258697247')
                             } else ;
                         } else ;
